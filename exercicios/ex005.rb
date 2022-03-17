@@ -5,10 +5,3 @@ def index_of(list, value)
 end
 
 index_of(list, 'F')
-
-
-
-
-
-
-# list.select{ |valor| valor.end_with? value }
