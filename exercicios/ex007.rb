@@ -7,16 +7,14 @@ def self.multiplos(qtd, multiplo)
 end
 
 def self.tabuada(fim_tabuada)
-    tabuada = []
-    inicio=1
-    while inicio <= fim_tabuada
-      for x in (1..10)
-        tabuada << inicio * x 
-      end
-      inicio += 1
+  while inicio <= fim_tabuada
+    for x in (1..10)
+      tabuada << inicio * x 
     end
-    puts tabuada
+    inicio += 1
+  end
 end
 
 multiplos(5,2)
 tabuada(10)
+
