@@ -1,4 +1,4 @@
-require_relative 'cliente' 
+require_relative 'cliente'
 
 class Conta
   attr_reader :numero, :titular
