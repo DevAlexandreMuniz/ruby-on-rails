@@ -4,9 +4,9 @@ class Conta
   attr_reader :numero, :titular
   attr_accessor :saldo
 
-  def initialize(numero, nome, sobrenome, saldo)
+  def initialize(numero, titular, saldo)
     @numero = numero
-    @titular = Cliente.new(nome, sobrenome)
+    @titular = titular
     @saldo = saldo
   end
 
