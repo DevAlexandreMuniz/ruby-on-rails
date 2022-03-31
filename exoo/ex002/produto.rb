@@ -1,3 +1,4 @@
+require_relative 'categoria'
 class Produto
   attr_accessor :nome, :categoria, :preco, :estoque
   def initialize(nome: 'Sem nome', categoria: Categoria.new, preco:0, estoque:0)
