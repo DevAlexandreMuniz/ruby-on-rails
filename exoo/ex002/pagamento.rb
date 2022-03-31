@@ -1,15 +1,17 @@
 class Pagamento
-  attr_accessor :quantidade, :produto, :preco, :valor
-  def initialize(quantidade:, produto: 'Geral', preco:)
+  attr_accessor :quantidade, :produto, :valor
+  def initialize(quantidade:, produto:)
     @quantidade = quantidade
     @produto = produto
-    @preco = preco
     @valor
   end
+
   def calcular_valor
-    self.valor = quantidade * preco
+    @valor = self.quantidade * self.preco
+    remove_estoque(self.quantidade)
   end
+
   def aplicar_desconto(porcentagem)
-    self.valor = valor - porcentagem
+    @valor -= @valor * porcentagem/100
   end
 end
