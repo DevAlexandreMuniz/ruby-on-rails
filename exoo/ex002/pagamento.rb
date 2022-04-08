@@ -7,8 +7,8 @@ class Pagamento
   end
 
   def calcular_valor
-    @valor = self.quantidade * self.preco
-    remove_estoque(self.quantidade)
+    @valor = @quantidade * Produto.preco
+    Produto.remove_estoque(@quantidade)
   end
 
   def aplicar_desconto(porcentagem)
@@ -20,4 +20,5 @@ quantidade = 3
     produto = Produto.new(nome: 'Caneta', preco: 3, estoque: 100)
     pagamento = Pagamento.new(quantidade: quantidade, produto: produto)
 
-    puts produto.preco
+    puts pagamento.valor
+    puts produto.estoque
