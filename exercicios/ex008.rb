@@ -4,7 +4,7 @@ def self.multiplica_antecessor_predecessor(array)
   resultado = []
   
   array.with_index do |value, index|
-    
+    puts index
   end
 end
 
