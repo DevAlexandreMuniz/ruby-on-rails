@@ -1,10 +1,14 @@
-array = [1, 2, 3, 4, 5, 6]
+array = [4, 1, 6, 7, 9, 3, 0]
 
 def self.multiplica_antecessor_predecessor(array)
-  resultado = []
-  
-  array.with_index do |value, index|
-    puts index
+  array.map.with_index do |value, index|
+    if array[index] == array.first()
+      puts array[index] * array[index +1]
+    elsif  array[index] != array.last()
+      puts array[index -1] * array[index +1]
+    elsif array.last()
+      puts array[index] * array[index-1]
+    end
   end
 end
 
